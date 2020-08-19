@@ -20,7 +20,7 @@ const login = async ({ request, response }: Context) => {
     response.status = 400;
     response.body = {
       exito: false,
-      mensaje: "Usuario no encontrado",
+      mensaje: "Usuario no encontrado o contraseña equivocada",
     };
   } else {
     const payload: Payload = {
@@ -38,7 +38,7 @@ const login = async ({ request, response }: Context) => {
 };
 
 const crearUsuario = async (
-  { request, response }: { request: any; response: any },
+  { request, response }: Context,
 ) => {
   if (!request.hasBody) {
     response.status = 400;

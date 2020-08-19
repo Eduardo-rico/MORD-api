@@ -1,4 +1,4 @@
-import { Application, Router } from "https://deno.land/x/oak/mod.ts";
+import { Application } from "https://deno.land/x/oak/mod.ts";
 
 import router from "./routes/index.routes.ts";
 import conectarDB from "./db/index.ts";
